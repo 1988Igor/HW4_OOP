@@ -24,7 +24,7 @@ public class Bow extends Weapon {
     public String toString() {
         return "Bow/ " +
                 "range= " + range +
-                ",/ Damage= " + pointOfDamage + "/"+
+                ",/ Damage= " + pointOfDamage + "/" +
                 ' ';
     }
 }

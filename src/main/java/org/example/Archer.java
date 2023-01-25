@@ -13,9 +13,11 @@ public class Archer<T extends Shield> extends Warrior {
     public String toString() {
         return "Archer " + super.toString();
     }
-    public int shootRange(){
-        return((Bow) getWeapon()) .getRange();
-    }}
+
+    public int shootRange() {
+        return ((Bow) getWeapon()).getRange();
+    }
+}
 
 
 

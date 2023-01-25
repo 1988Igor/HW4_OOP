@@ -5,7 +5,7 @@ import java.util.Random;
 public class WoodenShield implements Shield {
     @Override
     public int getProtection() {
-        return new Random().nextInt(2,20);
+        return new Random().nextInt(2, 20);
     }
 
     @Override

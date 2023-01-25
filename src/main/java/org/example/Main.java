@@ -10,7 +10,11 @@ import java.util.Random;
  добавить поле расстояние поражения.
  Создать различные виды вооружения, например, меч, лук, лопата. Обеспечить, чтобы определенный тип воина мог
  нести только определенной оружие
- Создать класс командира*/
+ Создать класс командира
+ На основе работы на уроке. Создать класс щита, разработать разные типы щитов, добавить в семейство классов Warriors
+ обобщения в виде щитов. Реструктуризировать код в конечных классах семейства Warriors. Добавить метод определения
+ минимального щита в команде.
+* Продумать, как можно сделать воина без щита.*/
 public class Main {
     public static void main(String[] args) {
         Team<Swordman> team1 = new Team<>();
@@ -20,8 +24,8 @@ public class Main {
 
         team1.addWarriorToTeam(new Swordman("Jack", 50, new Sword(10), woodenShield))
                 .addWarriorToTeam(new Swordman("Bruce", 100, new Sword(50), ironShield))
-                .addWarriorToTeam(new Swordman("Bruce", 100, new Sword(30),woodenShield))
-                .addWarriorToTeam(new Swordman("Donald", 85, new Sword(30),ironShield));
+                .addWarriorToTeam(new Swordman("Bruce", 100, new Sword(30), woodenShield))
+                .addWarriorToTeam(new Swordman("Donald", 85, new Sword(30), ironShield));
         for (Swordman swordman : team1) {
             System.out.println(swordman);
 
@@ -33,7 +37,7 @@ public class Main {
 
         System.out.println("----------------------------");
         Team<Archer> team2 = new Team<>();
-        team2.addWarriorToTeam(new Archer("Igor", 20, new Bow(50, 10),woodenShield))
+        team2.addWarriorToTeam(new Archer("Igor", 20, new Bow(50, 10), woodenShield))
                 .addWarriorToTeam(new Archer("Roman", 100, new Bow(30, 20), ironShield))
                 .addWarriorToTeam(new Archer("Rico", 10, new Bow(20, 15), woodenShield));
         for (Archer archer : team2) {
