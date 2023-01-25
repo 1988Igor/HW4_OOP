@@ -9,7 +9,7 @@ public abstract class Warrior {
   private Weaponable weapon;
   private DefenseShields shields;
 
-  public DefenseShields getShields() {
+  public DefenseShields  getShields() {
     return shields;
   }
 
@@ -21,14 +21,13 @@ public abstract class Warrior {
     this.name = name;
     this.healtPoint = healtPoint;
     this.weapon = weapon;
+    this.shields = shields;
 
 
 
   }
 
-
-
-  public Warrior(String name, int healtPoint, Sword sword) {
+  public Warrior(String name, int healtPoint, Sword sword, DefenseShields shields) {
   }
 
 
@@ -63,7 +62,7 @@ public abstract class Warrior {
             "name='" + name + '\'' +
             ", healtPoint=" + healtPoint +
             ", weapon=" + weapon +
-            ", shields=" + shields +
+            ", Defense="  + shields +
             '}';
   }
 }

@@ -22,9 +22,9 @@ public class Bow extends Weapon {
 
     @Override
     public String toString() {
-        return "Bow{" +
+        return "Bow " +
                 "range=" + range +
                 ", Damage=" + pointOfDamage +
-                '}';
+                ' ';
     }
 }

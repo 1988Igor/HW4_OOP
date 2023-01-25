@@ -1,19 +1,24 @@
 package org.example.Weapons;
 
-public class DefenseShields<E> {
-    private String typeOfShields;
-    private int minShield;
+import java.util.Random;
 
-    public DefenseShields(String typeOfShields, int minShield) {
+public class DefenseShields {
+    private final String typeOfShields;
+    private int hardness;
+
+    public DefenseShields(String typeOfShields, int hardness) {
         this.typeOfShields = typeOfShields;
-        this.minShield = minShield;
+        this.hardness = hardness;
     }
+
+
+
 
     @Override
     public String toString() {
-        return "DefenseShields{" +
-                "typeOfShields='" + typeOfShields + '\'' +
-                ", minShield=" + minShield +
+        return "Shield " +
+                "typeOfShields= '" + typeOfShields + '\'' +
+                ", hardness= " + hardness +
                 '}';
     }
 }
