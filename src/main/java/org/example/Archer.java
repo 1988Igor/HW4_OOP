@@ -1,12 +1,12 @@
 package org.example;
 
 import org.example.Weapons.Bow;
-import org.example.Weapons.DefenseShields;
+import org.example.Weapons.Shield;
 
-public class Archer extends Warrior {
+public class Archer<T extends Shield> extends Warrior {
 
-    public Archer(String name, int healtPoint, Bow bow, DefenseShields shields) {
-        super(name, healtPoint, bow, shields);
+    public Archer(String name, int healtPoint, Bow bow, T shield) {
+        super(name, healtPoint, bow, shield);
     }
 
     @Override

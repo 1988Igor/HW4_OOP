@@ -1,33 +1,27 @@
 package org.example;
 
-import org.example.Weapons.DefenseShields;
+import org.example.Weapons.Shield;
 import org.example.Weapons.Sword;
 
-public abstract class Warrior {
+public abstract class Warrior<T extends Shield> {
   private   String name;
   private  int healtPoint;
   private Weaponable weapon;
-  private DefenseShields shields;
+  private T shield;
 
-  public DefenseShields  getShields() {
-    return shields;
-  }
 
-  public void setShields(DefenseShields shields) {
-    this.shields = shields;
-  }
 
-  public Warrior(String name, int healtPoint, Weaponable weapon, DefenseShields shields) {
+
+
+  public Warrior(String name, int healtPoint, Weaponable weapon, T shield) {
     this.name = name;
     this.healtPoint = healtPoint;
     this.weapon = weapon;
-    this.shields = shields;
-
-
+    this.shield = shield;
 
   }
 
-  public Warrior(String name, int healtPoint, Sword sword, DefenseShields shields) {
+  public Warrior(String name, int healtPoint, Sword sword) {
   }
 
 
@@ -54,15 +48,16 @@ public abstract class Warrior {
   public void setWeapon(Weaponable weapon) {
     this.weapon = weapon;
   }
-
+public T getShield(){
+    return shield;
+}
 
   @Override
   public String toString() {
-    return "Warrior{" +
+    return "Warrior /" +
             "name='" + name + '\'' +
-            ", healtPoint=" + healtPoint +
-            ", weapon=" + weapon +
-            ", Defense="  + shields +
-            '}';
+            ", healtPoint= " + healtPoint +
+            ", weapon= " + weapon + " type of shield= " +  shield
+            ;
   }
 }

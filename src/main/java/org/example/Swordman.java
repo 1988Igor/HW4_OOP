@@ -1,15 +1,14 @@
 package org.example;
 
-import org.example.Weapons.DefenseShields;
-import org.example.Weapons.Sword;
+import org.example.Weapons.Shield;
 
-public class Swordman extends Warrior {
-
+public class Swordman<T extends Shield> extends Warrior {
 
 
 
-    public Swordman(String name, int healtPoint, Weaponable weapon, DefenseShields shields) {
-        super(name, healtPoint, weapon, shields);
+
+    public Swordman(String name, int healtPoint, Weaponable weapon, T shield) {
+        super(name, healtPoint, weapon, shield);
     }
 
 

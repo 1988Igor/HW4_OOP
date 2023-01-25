@@ -18,6 +18,6 @@ public class Sword extends Weapon {
 
     @Override
     public String toString() {
-        return "Sword damage =  " + pointOfDamage;
+        return "Sword damage= " + pointOfDamage + "/";
     }
 }

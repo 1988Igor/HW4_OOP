@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.Weapons.Shield;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -24,5 +26,14 @@ public class Team<E extends Warrior> implements  Iterable<E>{
             }
         }
         return maxRange;
+    }
+    public Shield getMinShield(){
+        Shield minShield = team.get(0).getShield();
+        for(E person:team){
+            if(person.getShield().getProtection() < minShield.getProtection()) {
+                minShield = person.getShield();
+            }
+        }
+        return minShield;
     }
 }
